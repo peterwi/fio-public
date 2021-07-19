@@ -8,7 +8,7 @@ FIOCONFIG=$PWD/fio-4k.ini
 RESULTS_PATH=$PWD/fio-results
 SCRATCH_DIR="/mnt/test"
 SIZE="32G"
-NJOBS=4
+NJOBS=$(cat $PWD/fio-1M.ini| grep numjobs | cut -d = -f 2)
 BLOCKSIZE=4096
 SECTION=seqw
 
